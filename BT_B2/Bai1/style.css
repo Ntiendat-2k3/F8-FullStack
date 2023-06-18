@@ -1,0 +1,42 @@
+body {
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #666;
+}
+.container {
+     background-color: #fff;
+     width: 710px;
+     padding: 10px;
+     margin: 0 auto;
+}
+p {
+     width: 470px;
+}
+.tables {
+     display: flex;
+     flex-direction: column;
+     margin-top: 30px;
+     row-gap: 20px;
+     text-align: left;
+}
+tbody input {
+     width: 300px;
+     padding: 12px 25px 12px 8px;
+}
+.wrap {
+     position: relative;
+}
+.fa-chevron-down {
+     position: absolute;
+     padding: 6px 6px;
+     bottom: 20%;
+     right: 5%;
+     cursor: pointer;
+}
+button {
+     padding: 16px 28px;
+     margin: 20px 0;
+     outline: none;
+     border: none;
+     background-color: #08768d;
+     cursor: pointer;
+}
