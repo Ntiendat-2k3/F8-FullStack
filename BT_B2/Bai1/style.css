@@ -21,6 +21,9 @@ table label {
      font-weight: 700;
      margin: 10px 0 5px 0;
 }
+table td {
+     gap: 30px;
+}
 input {
      width: 300px;
      padding: 12px 25px 12px 8px;
