@@ -1,0 +1,48 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body {
+     padding: 50px 50px;
+}
+div {
+     width: 310px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 10px;
+}
+input, select {
+     width: 57%;
+     padding: 4px 8px;
+     outline: none;
+     border: 1px solid #5da3fc;
+}
+.wrapper {
+     display: flex;
+     flex-direction: column;
+     width: 60%;
+
+}
+.wrapper input {
+     width: auto;
+     margin-left: 80px;
+}
+.wrap {
+     display: flex;
+     justify-content: flex-start;
+}
+.wrap label {
+     margin-left: 8px;
+}
+button {
+     display: inline-block;
+     margin-top: 20px;
+     margin-left: 120px;
+     border: 1px solid #5da3fc;
+     border-radius: 3px;
+}
+.btn2{
+     margin-left: 0;
+}
