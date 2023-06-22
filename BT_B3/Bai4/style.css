@@ -41,11 +41,11 @@ section {
      padding-right: 100px;
      background-color: #f6f6f6;
 }
-.heading {
+.section-heading {
      font-size: 24px;
      color: #666;
 }
-.desc {
+.section-desc {
      margin-top: 20px;
      color: #999;
      font-size: 16px;
@@ -54,20 +54,20 @@ section {
 .desc p {
      margin-top: 5px;
 }
-.contact {
+.section-contact {
      margin-top: 20px;
      color: #999;
 }
-.contact p {
+.section-contact p {
      margin-top: 5px;
 }
-.contact p:not(:last-child) a {
+.section-contact p:not(:last-child) a {
      text-decoration: none;
 }
-.contact p:last-child a {
+.section-contact p:last-child a {
      color: #b19554;
 }
-.contact a {
+.section-contact a {
      color: #999;
      margin-left: 5px;
 }

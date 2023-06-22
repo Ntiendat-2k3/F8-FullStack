@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Buoi3</title>
+          <style>
+               table {
+                    border-collapse: collapse;
+                    background-color: rgb(237, 237, 245);
+               }
+               table td,
+               th {
+                    padding: 10px 12px;
+               }
+               .img {
+                    width: 100px;
+                    height: 100px;
+               }
+               .img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+               }
+               th {
+                    text-align: left;
+               }
+               .price {
+                    text-align: right;
+               }
+               .number {
+                    text-align: center;
+               }
+               input {
+                    padding: 8px 10px;
+                    margin-top: 8px;
+               }
+          </style>
+     </head>
+     <body>
+          <table border="1">
+               <tr>
+                    <th colspan="2" style="text-align: center">Thông tin sản phẩm</th>
+                    <th rowspan="2">SL</th>
+                    <th rowspan="2">Đơn giá (đồng)</th>
+                    <th rowspan="2">Thành tiền (đồng)</th>
+               </tr>
+               <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+               </tr>
+               <tr>
+                    <td class="img">
+                         <img
+                              src="https://images.unsplash.com/photo-1489112318845-bcfb7233b1a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                              alt="images" />
+                    </td>
+                    <td>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quidem?
+                    </td>
+                    <td class="number">1</td>
+                    <td class="price">14.070.000</td>
+                    <td class="price">14.070.000</td>
+               </tr>
+               <tr>
+                    <th colspan="2">Cộng</th>
+                    <td class="number">1</td>
+                    <td></td>
+                    <td class="price">14.070.000</td>
+               </tr>
+               <tr>
+                    <th colspan="4">Tổng cộng</th>
+                    <td class="price">14.070.000</td>
+               </tr>
+          </table>
+
+          <!--  -->
+          <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+               <!-- Gửi dữ liệu nhập đến https://api-gateway.fullstack.edu.vn/action_page.php -->
+               <div><input type="text" name="name" placeholder="Enter your name..." /></div>
+               <div><input type="email" name="email" placeholder="Enter your email..." /></div>
+               <div>
+                    <input type="password" name="password" placeholder="Enter your password..." />
+               </div>
+               <div><input type="tel" name="Phone" placeholder="Enter your tel..." /></div>
+               <button>Submit</button>
+          </form>
+
+          <!--  -->
+          <form action="">
+               <div>
+                    <label for="name">Fullname :</label>
+                    <input type="text" name="name" id="name" placeholder="Fullname..." value="NTienDat" required />
+               </div>
+               <div>
+                    <label for="age">Age :</label>
+                    <input
+                         type="number"
+                         name="age"
+                         id="age"
+                         placeholder="Age.."
+                         required
+                         min="10"
+                         max="50"
+                         step="3" />
+               </div>
+               <div>
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" placeholder="Email..." required />
+               </div>
+               <div>
+                    <label for="password">Password :</label>
+                    <input
+                         type="password"
+                         name="password"
+                         id="password"
+                         placeholder="Password..."
+                         required />
+               </div>
+               <div>
+                    <label for="avatar">Avatar :</label>
+                    <input type="file" name="avatar" id="avatar" />
+               </div>
+
+               <!-- name giống nhau => 1 group => chỉ chọn 1 -->
+               <div>
+                    <label>Gender</label>
+                    <label><input type="radio" name="gender" value="1" />Khac</label>
+                    <label><input type="radio" name="gender" value="2" checked />Nam</label>
+                    <label><input type="radio" name="gender" value="3" />Nu</label>
+               </div>
+
+               <div>
+                    <label>Source</label>
+                    <label><input type="checkbox" name="source" value="1" />Facebook</label>
+                    <label><input type="checkbox" name="source" value="2" />Instagram</label>
+                    <label><input type="checkbox" name="source" value="3" checked />Tiktok</label>
+               </div>
+
+               <!-- textarea -->
+               <div>
+                    <label for="message">Tin nhan</label>
+                    <textarea
+                         name="message"
+                         id="message"
+                         cols="30"
+                         rows="10"
+                         placeholder="NTienDat dap zai..."></textarea>
+               </div>
+
+               <!-- Select, option -->
+               <div>
+                    <label for="country">Tỉnh / Thành Phố</label>
+                    <select name="country" id="country">
+                         <option value="0" hidden>--Chọn Tỉnh / Thành Phố--</option>
+                         <optgroup label="Miền Bắc">
+                              <option value="1" selected>Hà Nội</option>
+                              <option value="2">Vĩnh Phúc</option>
+                         </optgroup>
+                         <optgroup label="Miền Nam">
+                              <option value="3">Hồ Chí Minh</option>
+                              <option value="4">Vũng Tàu</option>
+                         </optgroup>
+                    </select>
+               </div>
+
+               <button type="submit">Submit</button>
+               <button type="button">Button</button>
+               <button type="reset">Reset</button>
+          </form>
+     </body>
+</html>
