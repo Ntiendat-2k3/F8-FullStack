@@ -3,8 +3,21 @@
      margin: 0;
      box-sizing: border-box;
 }
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height:100vh;
+     background-color: #ddd;
+}
+.seller {
+     background-color: #fff;
+     padding: 30px 100px;
+}
 .seller__heading {
-     font-size: 30px;
+     font-size: 32px;
+     text-align: center;
+     margin-bottom: 10px;
 }
 .seller__list {
      display: flex;
