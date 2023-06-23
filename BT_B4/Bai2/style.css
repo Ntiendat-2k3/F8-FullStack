@@ -1,0 +1,43 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+.reservation {
+     background-color: #ddd;
+     padding: 80px 50px 50px;
+     text-align: center;
+}
+header {
+     font-family: "Bebas Neue", sans-serif;
+     font-size: 20px;
+}
+.heading {
+     font-family: "Alfa Slab One", cursive;
+}
+.reservation-form {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 30px;
+}
+.reservation-form input,
+.reservation-form button {
+     padding: 10px 16px;
+     border: 1px solid #999;
+     outline: none;
+}
+.reservation-form button {
+     font-family: "Alfa Slab One", cursive;
+     background-color: #af322a;
+     color: #fff;
+}
+input::placeholder {
+     font-family: "Bebas Neue", sans-serif;
+     color: #333;
+}

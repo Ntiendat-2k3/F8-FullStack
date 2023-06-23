@@ -17,9 +17,14 @@ body {
 }
 nav {
      border: 2px solid #b19554;
+     width: 56%;
+}
+nav .list {
      display: flex;
      justify-content: space-between;
-     width: 56%;
+}
+nav .list li {
+     list-style: none;
 }
 nav a {
      display: inline-block;
