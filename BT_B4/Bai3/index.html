@@ -10,40 +10,58 @@
                integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
                crossorigin="anonymous"
                referrerpolicy="no-referrer" />
-          <link rel="stylesheet" href="./style.css" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;800&display=swap"
+               rel="stylesheet" />
+          <link rel="stylesheet" href="./assets/styles/style.css" />
      </head>
 
      <body>
           <section class="seller">
+               <div class="lines"></div>
+               <!-- Đây là 1 thành phần trên trang chủ -->
                <h2 class="seller__heading">Best Seller</h2>
                <nav class="seller__banner">
                     <ul class="seller__list">
-                         <li class="seller__list--item active">
-                              <a href="#skincare" class="seller__list--link">Skincare</a>
+                         <li class="seller__list--item">
+                              <a href="#!" class="seller__list--link">
+                                   <label for="skincare">Skincare</label>
+                              </a>
                          </li>
                          <li class="seller__list--item">
-                              <a href="#haircare" class="seller__list--link">Haircare</a>
+                              <a href="#!" class="seller__list--link">
+                                   <label for="haircare">Haircare</label>
+                              </a>
                          </li>
                          <li class="seller__list--item">
-                              <a href="#cosmetics-cases" class="seller__list--link"
-                                   >Cosmetics Cases</a
-                              >
+                              <a href="#!" class="seller__list--link">
+                                   <label for="cosmetics">Cosmetics Cases</label>
+                              </a>
                          </li>
                          <li class="seller__list--item">
-                              <a href="#fragrance" class="seller__list--link">Fragrance</a>
+                              <a href="#!" class="seller__list--link">
+                                   <label for="fragrance">Fragrance</label>
+                              </a>
                          </li>
                          <li class="seller__list--item">
-                              <a href="#makeup" class="seller__list--link">Makeup</a>
+                              <a href="#!" class="seller__list--link">
+                                   <label for="makeup">Makeup</label>
+                              </a>
                          </li>
                     </ul>
                </nav>
                <div class="seller__container">
+                    <!-- Card 1 -->
                     <article class="seller__product">
                          <div class="seller__product--thumb">
-                              <img
-                                   src="https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                              <input type="radio" name="avt" id="skincare" class="input__avt"/>
+                              <!-- <img
+                                   src="./assets/images/1.jpg"
                                    alt="product"
-                                   class="seller__product--image" />
+                                   class="seller__product--image" /> -->
+                              <div class="seller__product--image1"></div>
                               <div class="seller__image--hover">
                                    <div class="seller__wrap--icon">
                                         <i class="fa-regular fa-heart seller--icon"></i>
@@ -62,7 +80,103 @@
                               <i class="fa-solid fa-star light"></i>
                               <i class="fa-solid fa-star"></i>
                               <i class="fa-solid fa-star"></i>
-                              <p class="seller__product--desc">Casual Shirt With Ruffle Hem</p>
+                              <h3 class="seller__product--desc">Casual Shirt With Ruffle Hem</h3>
+                              <p class="seller__product--desc">$122.00</p>
+                         </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="seller__product">
+                         <div class="seller__product--thumb">
+                              <input type="radio" name="avt" id="haircare" class="input__avt" />
+                              <!-- <img
+                                   src="./assets/images/2.jpg"
+                                   alt="product"
+                                   class="seller__product--image" /> -->
+                              <div class="seller__product--image2"></div>
+                              <div class="seller__image--hover">
+                                   <div class="seller__wrap--icon">
+                                        <i class="fa-regular fa-heart seller--icon"></i>
+                                        <i
+                                             class="fa-solid fa-arrow-right-arrow-left seller--icon"></i>
+                                        <i class="fa-regular fa-eye seller--icon"></i>
+                                   </div>
+                                   <button type="button" class="seller__product--btn">
+                                        Add To Card
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="seller__product--content">
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <h3 class="seller__product--desc">Casual Shirt With Ruffle Hem</h3>
+                              <p class="seller__product--desc">$122.00</p>
+                         </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="seller__product">
+                         <div class="seller__product--thumb">
+                              <input type="radio" name="avt" id="cosmetics" class="input__avt" />
+                              <!-- <img
+                                   src="./assets/images/3.jpg"
+                                   alt="product"
+                                   class="seller__product--image" /> -->
+                              <div class="seller__product--image3"></div>
+                              <div class="seller__image--hover">
+                                   <div class="seller__wrap--icon">
+                                        <i class="fa-regular fa-heart seller--icon"></i>
+                                        <i
+                                             class="fa-solid fa-arrow-right-arrow-left seller--icon"></i>
+                                        <i class="fa-regular fa-eye seller--icon"></i>
+                                   </div>
+                                   <button type="button" class="seller__product--btn">
+                                        Add To Card
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="seller__product--content">
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <h3 class="seller__product--desc">Casual Shirt With Ruffle Hem</h3>
+                              <p class="seller__product--desc">$122.00</p>
+                         </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="seller__product">
+                         <div class="seller__product--thumb">
+                              <input type="radio" name="avt" id="fragrance" class="input__avt" />
+                              <!-- <img
+                                   src="./assets/images/4.jpg"
+                                   alt="product"
+                                   class="seller__product--image" /> -->
+                              <div class="seller__product--image4"></div>
+                              <div class="seller__image--hover">
+                                   <div class="seller__wrap--icon">
+                                        <i class="fa-regular fa-heart seller--icon"></i>
+                                        <i
+                                             class="fa-solid fa-arrow-right-arrow-left seller--icon"></i>
+                                        <i class="fa-regular fa-eye seller--icon"></i>
+                                   </div>
+                                   <button type="button" class="seller__product--btn">
+                                        Add To Card
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="seller__product--content">
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star light"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <h3 class="seller__product--desc">Casual Shirt With Ruffle Hem</h3>
                               <p class="seller__product--desc">$122.00</p>
                          </div>
                     </article>

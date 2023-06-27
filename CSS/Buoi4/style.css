@@ -1,0 +1,121 @@
+body {
+     background-color: #ddd;
+}
+/*! ~ : tất cả thẻ liền sau thẻ ... */
+
+.box h2 ~ div p,  /* / tất cả      thẻ p là con div, đứng sau thẻ h2 */
+.box h2 ~ p {  /*/ ~ : tất cả thẻ p đứng liền sau h2 */
+     color: red;
+}
+/* ----------------------------------------------------------------------------- */
+
+/*! + : thẻ đầu tiên liền sau thẻ ... */
+.box p + h2 + h2  { 
+     color: green;
+}
+.box p + h2 ~ h2  { 
+     color: green;
+}
+/* ----------------------------------------------------------------------------- */
+
+.todos input:checked ~ span {
+     color: yellow;
+}
+/* ----------------------------------------------------------------------------- */
+
+/*: Chọn tất cả thẻ a có atb = target */
+a[target] {
+     color: green;
+}
+/*: Chọn tất cả thẻ a "CÓ" href="https://fullstack.edu.vn" */
+.website a[href="https://fullstack.edu.vn"] {
+     color: purple;
+}
+/*: Chọn tất cả thẻ a có href "BẮT ĐẦU" bằng "https://fullstack.edu.vn" */
+.website a[href^="https://fullstack"] {
+     color: palevioletred;
+}
+/*: Chọn tất cả thẻ a có href "ĐUÔI"  "https://fullstack.edu.vn" */
+.website a[href$="fullstack.edu.vn"] {
+     color: burlywood;
+}
+/* ----------------------------------------------------------------------------- */
+
+[class^="item-"] {
+     color: violet;
+}
+/* ----------------------------------------------------------------------------- */
+
+.sub-title::before {
+     content: attr(data-name);
+}
+
+p::first-line {   /* Dòng đầu tiên */
+     color: purple;
+}
+p::first-letter { /* Chữ đầu tiên */
+     font-size: 2rem;
+     font-style: italic;
+     color: firebrick;
+}
+p::selection {
+     color: yellow;
+     background-color: #333;
+}
+.fullname::placeholder {
+     color: rebeccapurple;
+}
+/* ----------------------------------------------------------------------------- */
+
+.title:hover {  /* máy tính */
+     color: magenta;
+}
+.title:active {  /* điện thoại */
+     color: magenta;
+}
+
+.btn:focus {  /* Áp dụng trong form */
+     background-color: aqua;
+}
+.play-btn {
+     text-decoration: none;
+     color: brown;
+}
+.play-btn:focus {
+     border: 1px solid salmon;
+}
+:disabled {
+     background-color: grey;
+}
+/* ----------------------------------------------------------------------------- */
+
+.products li:not(.active):not(.first) {
+     color: rebeccapurple;
+     font-size: 24px;
+}
+/* ----------------------------------------------------------------------------- */
+
+.product li:first-child {
+     color: royalblue;
+}
+.product li:last-child {
+     color: hotpink;
+}
+
+.product .item:first-of-type {
+     color: red;
+}
+.product .item:last-of-type {
+     color: magenta;
+}
+/* ----------------------------------------------------------------------------- */
+
+input:nth-of-type(1):focus ~ .content {
+     color: red;
+}
+input:nth-of-type(2):checked ~ .content {
+     color: green;
+}
+input:nth-of-type(3):checked ~ .content {
+     color: blue;
+}

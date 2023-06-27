@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Form - NTienDat</title>
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+               integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+               crossorigin="anonymous"
+               referrerpolicy="no-referrer" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
+               rel="stylesheet" />
+          <link rel="stylesheet" href="./style.css" />
+     </head>
+     <body>
+          <div class="container">
+               <h1 class="title">Hey there</h1>
+               <p>
+                    <span>We'd like to hear from you</span>. Send us your message or just say hy with our contact
+                    form or directly via phone, we love to chat.
+               </p>
+               <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="GET">
+                    <div class="name">
+                         <i class="fa-solid fa-user"></i>
+                         <input type="text" name="name" placeholder="Your name" required />
+                    </div>
+                    <div class="email">
+                         <i class="fa-solid fa-envelope"></i>
+                         <input type="email" name="email" placeholder="your@domain.com" required />
+                    </div>
+                    <div class="tel">
+                         <i class="fa-solid fa-mobile-screen-button"></i>
+                         <input type="tel" name="tel" placeholder="+44 00 123" required />
+                    </div>
+                    <div class="subject">
+                         <i class="fa-solid fa-joint"></i>
+                         <select name="subject">
+                              <option value="0">Subject</option>
+                              <option value="1">
+                                   nearest touch wrote piano belt brother man saw
+                              </option>
+                              <option value="2">
+                                   ice cook earlier flow found letter concerned
+                              </option>
+                              <option value="3">
+                                   forest fifth wide screen carbon tales establish
+                              </option>
+                              <option value="4">
+                                   nodded interest form dangerous sound thousand
+                              </option>
+                         </select>
+                    </div>
+                    <div class="message">
+                         <i class="fa-solid fa-message"></i>
+                         <textarea name="message" cols="30" rows="10" placeholder="Message">
+                         </textarea>
+                    </div>
+
+                    <button type="submit">SEND</button>
+               </form>
+          </div>
+     </body>
+</html>
