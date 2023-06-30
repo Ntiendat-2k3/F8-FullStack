@@ -5,65 +5,141 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Form - NTienDat</title>
+          <!-- Embed Icons -->
           <link
                rel="stylesheet"
                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
                crossorigin="anonymous"
                referrerpolicy="no-referrer" />
+          <!-- Embed Fonts -->
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
                href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
                rel="stylesheet" />
+          <!-- Styles -->
           <link rel="stylesheet" href="./style.css" />
      </head>
      <body>
-          <div class="container">
-               <h1 class="title">Hey there</h1>
-               <p>
-                    <span>We'd like to hear from you</span>. Send us your message or just say hy with our contact
-                    form or directly via phone, we love to chat.
+          <section class="container">
+               <h1 class="heading">Hey there</h1>
+               <p class="desc">
+                    <span class="desc__hightlight">We'd like to hear from you.</span> Send us your
+                    message or just say hy with our contact form or directly via phone, we love to
+                    chat
                </p>
-               <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="GET">
-                    <div class="name">
-                         <i class="fa-solid fa-user"></i>
-                         <input type="text" name="name" placeholder="Your name" required />
-                    </div>
-                    <div class="email">
-                         <i class="fa-solid fa-envelope"></i>
-                         <input type="email" name="email" placeholder="your@domain.com" required />
-                    </div>
-                    <div class="tel">
-                         <i class="fa-solid fa-mobile-screen-button"></i>
-                         <input type="tel" name="tel" placeholder="+44 00 123" required />
-                    </div>
-                    <div class="subject">
-                         <i class="fa-solid fa-joint"></i>
-                         <select name="subject">
-                              <option value="0">Subject</option>
-                              <option value="1">
-                                   nearest touch wrote piano belt brother man saw
-                              </option>
-                              <option value="2">
-                                   ice cook earlier flow found letter concerned
-                              </option>
-                              <option value="3">
-                                   forest fifth wide screen carbon tales establish
-                              </option>
-                              <option value="4">
-                                   nodded interest form dangerous sound thousand
-                              </option>
-                         </select>
-                    </div>
-                    <div class="message">
-                         <i class="fa-solid fa-message"></i>
-                         <textarea name="message" cols="30" rows="10" placeholder="Message">
-                         </textarea>
+               
+               <!-- Form-submit -->
+               <form
+                    action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                    class="form-wrapper"
+                    method="GET">
+                    <!-- Name -->
+                    <div class="form-group">
+                         <label for="name"><i class="fa-solid fa-user icon"></i></label>
+                         <input
+                              type="text"
+                              name="name"
+                              id="name"
+                              placeholder="Your name..."
+                              required />
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-xmark"></i>
+                         <p class="input__suggest" style="color: #eee;">Enter your name</p>
                     </div>
 
-                    <button type="submit">SEND</button>
+                    <!-- Email -->
+                    <div class="form-group">
+                         <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                         <input
+                              type="email"
+                              name="email"
+                              id="email"
+                              placeholder="your@domain.com"
+                              required />
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-xmark"></i>
+                         <p class="input__suggest" style="color: #eee;">Enter your email</p>
+                    </div>
+
+                    <!-- Tel -->
+                    <div class="form-group">
+                         <label for="tel"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                         <input type="tel" name="tel" id="tel" placeholder="+44 00 123" required />
+                         <p class="input__suggest" style="color: #eee;">Enter your phone</p>
+                    </div>
+
+                    <!--/ Subject Custom Pro -->
+                    <!-- <div class="form-group form-subject">
+                         <label for="subject"><i class="fa-solid fa-bars"></i></label>
+                         <div class="selected">
+                              <i class="fas fa-chevron-up"></i>
+                              <i class="fas fa-chevron-down"></i>
+                              <span class="option-default">Subject</span>
+                              <ul class="dropdown-list">
+                                   <li class="dropdown-item" style="--clr: #e85e24">
+                                        <span class="dropdown-text"> Html </span>
+                                        <i class="fa-brands fa-html5 dropdown-icon"></i>
+                                   </li>
+                                   <li class="dropdown-item" style="--clr: #2862e9">
+                                        <span class="dropdown-text"> CSS </span>
+                                        <i class="fa-brands fa-css3 dropdown-icon"></i>
+                                   </li>
+                                   <li class="dropdown-item" style="--clr: #f79f1f">
+                                        <span class="dropdown-text"> Javascript </span>
+                                        <i class="fa-brands fa-js dropdown-icon"></i>
+                                   </li>
+                                   <li class="dropdown-item" style="--clr: #00a8ff">
+                                        <span class="dropdown-text"> ReactJS </span>
+                                        <i class="fa-brands fa-react dropdown-icon"></i>
+                                   </li>
+                                   <li class="dropdown-item" style="--clr: #ea4c89">
+                                        <span class="dropdown-text"> Sass </span>
+                                        <i class="fa-brands fa-sass"></i>
+                                   </li>
+                              </ul>
+                         </div>
+                         <p class="input__suggest" style="color: #eee;">Please choose</p>
+                    </div> -->
+                    
+                    <!--/ Subject Custom Normal -->
+                    <div class="form-group">
+                         <label for="subject"><i class="fa-solid fa-bars"></i></label>
+                         <select name="subject" id="subject" required>
+                              <option value="">Subject</option>
+                              <option value="1">Html</option>
+                              <option value="2">CSS</option>
+                              <option value="3">Javascript</option>
+                              <option value="4">ReactJS</option>
+                              <option value="5">Sass</option>
+                         </select>
+                         <i class="fa-solid fa-caret-up select-icon"></i>
+                         <i class="fa-solid fa-caret-down select-icon"></i>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group group-message">
+                         <label for="message" class="label-message">
+                              <i class="fa-solid fa-mobile-screen-button"> </i>
+                         </label>
+                         <textarea name="message" id="message" placeholder="Message" required></textarea>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-xmark"></i>
+                         <p class="input__suggest" style="color: #eee;">Please write a message</p>
+                    </div>
+
+                    <!-- Cta -->
+                    <div class="group-submit">
+                         <div class="checkbox">
+                              <input type="checkbox" name="send" id="check" hidden />
+                              <label class="label-submit" for="check">
+                                   Send me a copy of this message
+                              </label>
+                         </div>
+                         <button type="submit">SEND</button>
+                    </div>
                </form>
-          </div>
+          </section>
      </body>
 </html>

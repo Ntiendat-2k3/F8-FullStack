@@ -1,0 +1,71 @@
+a {
+     text-decoration: none;
+     text-decoration: underline; /* gạch chân */
+     text-decoration: line-through; /* gạch giữa */
+     text-decoration: overline; /* gạch trên */
+     text-decoration: overline underline line-through;
+}
+h2 {
+     text-transform: uppercase;
+     text-transform: capitalize;
+     text-indent: 10px; /* thụt vào lề 10px hàng đầu chữ cái đầu */
+}
+.content {
+     word-wrap: break-word;
+}
+/*: Thẻ "inline" trình duyệt xem giống như xử lý text => text-align đc */
+.wrap-btn {
+     text-align: center;
+}
+
+/* ------------------------------ background ---------------------------------- */
+/* 
+     background-color
+     background
+     background-image: url()
+     background-size: 500px 500px; <=> width heigth 
+     background-repeat
+     background-attachment 
+     background-position  thg dùng trong "CSS image sprites"
+*/
+
+body {
+     /* color: #fff;      */
+     /* background: url(https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80); */
+     /* background-repeat: no-repeat; */
+     /* background-position: 100% 0; */
+     /* background-position: 10px 20px; */
+     /* background-size: 500px 500px; <=> width heigth */
+     /* background-size: cover; */
+     /* background-attachment: fixed; */
+}
+
+/* ------------------------------- Border -------------------------------- */
+/* .box {
+     width: 50px;
+     height: 50px;
+     border: 5px double rebeccapurple;
+     border-top-color: violet;
+     border-bottom-color: royalblue;
+     border-left-color: salmon;
+} */
+
+/* Triangle */
+.box2 {
+
+     /* width: 100px;
+     height: 100px; */
+     /* background-color: red; */
+     width:  0;
+     height: 0;
+     border-width: 50px;
+     border-style: solid;
+     border-color: transparent transparent blue transparent;
+}
+.box {
+     width: 0;
+     height: 0;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+     border-bottom: 50px solid black;
+}
