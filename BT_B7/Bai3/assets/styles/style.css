@@ -1,0 +1,116 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Asap", sans-serif;
+}
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+.container {
+     width: 1200px;
+     padding: 20px;
+     background-image: linear-gradient(-43deg, #bcbfca 0%, #c850c0 46%, #ffcc70 100%);
+     border-radius: 4px;
+}
+.heading {
+     font-size: 16px;
+     color: #666;
+     margin-bottom: 18px;
+     position: relative;
+}
+.heading::after {
+     content: "";
+     position: absolute;
+     top: 50%;
+     height: 1px;
+     width: 70%;
+     background-color: #eee;
+     margin-left: 10px;
+}
+.navbar {
+     display: flex;
+     justify-content: flex-start;
+     gap: 15px;
+}
+.navbar__item {
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     row-gap: 3px;
+     background-color: #e5e5e5;
+     padding: 6px 20px;
+     border-radius: 999px;
+     text-align: center;
+     cursor: pointer;
+     margin-bottom: 25px;
+     transition: 0.15s linear;
+}
+.navbar__item.active,
+.navbar__item:hover {
+     background-color: #ae7b38;
+     color: #fff;
+}
+.navbar--link {
+     text-decoration: none;
+     color: #666;
+     font-size: 14px;
+     font-weight: bold;
+     transition: 0.15s linear;
+}
+.navbar__item.active .navbar--link,
+.navbar__item:hover .navbar--link {
+     color: #fff;
+}
+.number {
+     font-size: 10px;
+     font-style: italic;
+     font-weight: 500;
+}
+
+.cards {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+}
+article {
+     position: relative;
+     width: 100%;
+     height: 222px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: .15s linear;
+}
+article:hover {
+     scale: .99;
+}
+.area,
+.quality {
+     position: absolute;
+     color: #fff;
+     font-weight: 600;
+}
+.area {
+     top: 25px;
+     left: 20px;
+     font-size: 20px;
+}
+.quality {
+     bottom: 20px;
+     left: 20px;
+     color: #fff;
+     font-weight: 400;
+     font-size: 12px;
+}
+.quality b {
+     font-size: 15px;
+}
+.card__img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 5px;
+}
