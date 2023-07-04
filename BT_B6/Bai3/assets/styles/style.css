@@ -2,4 +2,246 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     border: none;
+     outline: none;
+     font-family: "Nunito", sans-serif;
+}
+:root {
+     --primary--color: #ff574d;
+}
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: url(../image/bg.jpg) no-repeat;
+     background-position: 0 100%;
+     background-size: cover;
+}
+.container {
+     display: flex;
+     width: 730px;
+     position: relative;
+}
+/* ------------------------------- Contact -----------------------------------*/
+.contact {
+     background-color: var(--primary--color);
+     padding: 50px 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     flex: 1.1;
+}
+.contact__title {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contact__title .icon {
+     display: inline-block;
+     width: 35px;
+     height: 35px;
+     border-radius: 4px;
+     background-color: #fff;
+     position: relative;
+}
+.contact__title .icon::before {
+     content: attr(data-logo);
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     color: var(--primary--color);
+     font-style: normal;
+     font-size: 26px;
+}
+.contact__title span {
+     font-size: 30px;
+     color: #fff;
+     margin-left: 12px;
+     font-weight: 700;
+}
+.contact__desc {
+     margin: 20px 0 33px;
+     color: #fdf7f3;
+     font-size: 14px;
+     font-weight: 400;
+     text-align: center;
+     opacity: 0.96;
+}
+.contact__more {
+     text-decoration: none;
+     padding: 8px 30px;
+     background-color: #eee;
+     color: var(--primary--color);
+     font-size: 15px;
+     font-weight: 600;
+     border-radius: 2px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     margin-bottom: 40px;
+}
+.contact__more:hover {
+     opacity: 0.9;
+}
+.contact__socials {
+     display: flex;
+     gap: 10px;
+}
+.contact__link {
+     text-decoration: none;
+     color: #eee;
+     padding: 6px 10px;
+     background-color: rgb(102, 102, 102, 0.1);
+     transition: 0.25s linear;
+}
+.contact__link i {
+     font-size: 14px;
+}
+.contact__link:hover i {
+     color: var(--clr);
+}
+
+/* -------------------------------------------- Form --------------------------------------*/
+.form {
+     width: 368px;
+     background-color: #fefefe;
+     padding: 50px 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+     flex: 1.5;
+}
+.form__header {
+     color: #272323;
+     font-size: 24px;
+     font-weight: 700;
+     position: relative;
+     padding-bottom: 12px;
+}
+.form__header::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-60%);
+     display: inline-block;
+     width: 40px;
+     height: 1.4px;
+     border-radius: 999px;
+     background-color: var(--primary--color);
+}
+.highlight__text {
+     color: var(--primary--color);
+}
+input[type="email"],
+input[type="password"] {
+     width: 100%;
+     margin-top: 12px;
+     padding: 12px 20px;
+     border: 1px solid #ddd;
+     border-radius: 3px;
+}
+input[type="password"] {
+     margin-top: 4px;
+}
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+     color: #999;
+     font-weight: normal;
+     font-size: 14px;
+}
+.form__wrapper {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.form--remember {
+     position: relative;
+}
+.form--remember .checkbox {
+     margin-left: 26px;
+     color: #666;
+     font-size: 15px;
+}
+.form--remember .checkbox::before,
+.form--remember .checkbox::after {
+     content: "";
+     position: absolute;
+     display: inline-block;
+}
+.form--remember .checkbox::before {
+     left: 0;
+     width: 17px;
+     height: 17px;
+     border: 2px solid #ddd;
+     border-radius: 4px;
+     background-color: #fdfdfd;
+}
+.form--remember input[type="checkbox"]:checked ~ .checkbox::after {
+     left: 5px;
+     top: 5px;
+     width: 9px;
+     height: 4px;
+     border-bottom: 3px solid var(--primary--color);
+     border-left: 3px solid var(--primary--color);
+     rotate: -45deg;
+}
+.form--forgot {
+     text-decoration: none;
+     color: #666;
+     font-size: 15px;
+     transition: 0.25s linear;
+}
+button[type="submit"] {
+     width: 100%;
+     background-color: var(--primary--color);
+     padding: 12px 0;
+     border-radius: 3px;
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 14px;
+     letter-spacing: 0.8px;
+     font-weight: normal;
+     margin-top: 8px;
+}
+button[type="submit"]:hover {
+     opacity: 0.9;
+     cursor: pointer;
+}
+.form__account,
+.form__register {
+     text-decoration: none;
+     color: #666;
+     font-size: 15px;
+}
+.form__register {
+     margin-left: 3px;
+     transition: 0.25s linear;
+}
+.form__register:hover,
+.form--forgot:hover {
+     color: var(--primary--color);
+}
+
+/* --------------------------- Open Form -------------------------------- */
+.open__form {
+     position: absolute;
+     left: 38%;
+     top: 50%;
+     cursor: pointer;
+}
+.open__form i {
+     background-color: #fff;
+     color: var(--primary--color);
+     border-radius: 50%;
+     padding: 14px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 30px 0px;
+     flex-shrink: 0;
 }

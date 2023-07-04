@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <link rel="stylesheet" href="./style.css" />
+     </head>
+     <body>
+          <div class="btn-wrap"><button class="btn">Button</button></div>
+          <div class="box"></div>
+          <span class="span"></span>
+
+          <!-- ------------------------Image------------------------ -->
+          <div class="imgs">
+               <img
+                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1274&q=80"
+                    alt="image"
+                    class="img" />
+               <img
+                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1274&q=80"
+                    alt="image"
+                    class="img" />
+                    
+               <!--: img thực chất là 1 khối vào quanh ảnh và thuộc tính src giúp ảnh hiển thị trong khối đó  -->
+               <!--: img thẻ inline nhưng set đc width, height  -->
+               <!--: khoảng trắng dọc, ngang các img: vì là thẻ inline => browser coi là text mà "mặc định text có khoảng trống dưới" => khoảng trắng ngang , còn khoảng trắng dọc là do space giữa các chữ cái(thử viết liền 2 thẻ img sát nhau là hết khoảng trống dọc) -->
+          </div>
+
+          <!-- --------------------- Max-width,height Min-width,height --------------------------- -->
+          <div class="image">
+               <img
+                    src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="" />
+          </div>
+
+          <!-- ------------------------ Overflow  ------------------------ -->
+          <div class="box1">
+               <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores numquam
+                    repudiandae a maxime est quibusdam, corrupti cupiditate. Eligendi quia sunt enim
+                    non quis vero exercitationem laudantium, tenetur ab architecto aut nulla ducimus
+                    impedit? Iste repellendus sapiente nobis fugiat? Corrupti laudantium, odio
+                    impedit consectetur ad esse suscipit maiores repudiandae soluta tempora.
+               </p>
+               <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+               </ul>
+          </div>
+
+          <!-- ------------------------ Opacity  ------------------------ -->
+          <div class="box2">
+               <h1>F8 - Học lập trình</h1>
+               <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit a minima
+                    laboriosam est ipsa dolore omnis quibusdam voluptas at, expedita cupiditate.
+                    Dicta quo distinctio illum officia unde alias, ut sit.
+               </p>
+               <img
+                    src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="" />
+          </div>
+
+          <div class="map">
+               <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3542609296696!2d105.78538647538683!3d21.01850658062828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ed17b6271%3A0xbc5ecad0a98a50c4!2sJoily%20Coffee!5e0!3m2!1svi!2s!4v1688391379338!5m2!1svi!2s"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <h1 class="title">Học lập trình tại F8</h1>
+
+          <!-- ------------------------ Padding, Margin  ------------------------ -->
+          <div class="box3">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, explicabo.
+          </div>
+          <a href="#!" class="link">NTienDat</a>
+          <div class="box4">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eaque.
+          </div>
+
+          <!-- ------------------------ Margin Collapse ------------------------ -->
+          <h2 class="first">NTienDat</h2>
+          <h2 class="second">F8 - Học lập trình</h2>
+          <div class="banner">
+               <h1>F8 - Học lập trình</h1>
+          </div>
+
+          <!-- ------------------------ Box-model ------------------------ -->
+          <div class="box5">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptate!
+          </div>
+
+          <div class="products">
+               <div class="product">SP1</div>
+               <div class="product">SP2</div>
+               <div class="product">SP3</div>
+          </div>
+
+          <!-- / ******** Kĩ thuật cổ ********* -->
+          <ul class="list">
+               <li>Home</li>
+               <li>Services</li>
+               <li>Contact</li>
+          </ul>
+          <!-- / ****************************** -->
+
+     </body>
+</html>

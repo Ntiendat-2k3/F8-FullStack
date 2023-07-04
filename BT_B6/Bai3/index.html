@@ -5,7 +5,74 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Form Login</title>
+          <!-- Embed Fonts -->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap"
+               rel="stylesheet" />
+          <!-- Embed Icons -->
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+               integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+               crossorigin="anonymous"
+               referrerpolicy="no-referrer" />
+          <!-- Styles -->
           <link rel="stylesheet" href="./assets/styles/style.css" />
      </head>
-     <body></body>
+     <body>
+          <section class="container">
+               <div class="contact">
+                    <h2 class="contact__title">
+                         <i class="icon" data-logo="JL"></i> <span>Just Log</span>
+                    </h2>
+                    <p class="contact__desc">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt Lorem Ipsum
+                    </p>
+                    <a href="#!" class="contact__more">Read More</a>
+                    <div class="contact__socials">
+                         <a href="#!" class="contact__link" style="--clr: #0e8ef2">
+                              <i class="fa-brands fa-facebook-f"></i>
+                         </a>
+                         <a href="#!" class="contact__link" style="--clr: #00cec9">
+                              <i class="fa-brands fa-twitter"></i>
+                         </a>
+                         <a href="#!" class="contact__link" style="--clr: yellow">
+                              <i class="fa-brands fa-google-plus-g"></i>
+                         </a>
+                         <a href="#!" class="contact__link" style="--clr: #5f27cd">
+                              <i class="fa-brands fa-linkedin-in"></i>
+                         </a>
+                    </div>
+               </div>
+               <label for="open" class="open__form"><i class="fa-solid fa-arrow-right"></i></label>
+               <!-- <input type="checkbox" id="open" hidden/> -->
+
+               <!-- Form -->
+               <form
+                    action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                    method="POST"
+                    class="form">
+                    <h2 class="form__header">
+                         Login to <span class="highlight__text">your account</span>
+                    </h2>
+                    <input type="email" name="email" placeholder="Email Address" required />
+                    <input type="password" name="password" placeholder="Password" required />
+                    <div class="form__wrapper">
+                         <div class="form--remember">
+                              <input type="checkbox" id="remember" hidden />
+                              <label for="remember" class="checkbox">Remember me</label>
+                         </div>
+                         <a href="#!" class="form--forgot">Forgot Password</a>
+                    </div>
+                    <button type="submit">LOGIN</button>
+                    <div class="form__accounts">
+                         <a href="#!" class="form__account">Don't have an account?</a>
+                         <a href="#!" class="form__register">Register here</a>
+                    </div>
+               </form>
+          </section>
+     </body>
 </html>
