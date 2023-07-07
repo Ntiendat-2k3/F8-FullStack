@@ -1,0 +1,257 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+/* --------------------- Float: ở "trên" cứ trống là lấp vào (tác động tất cả ptu đằng sau) -------------- */
+.box {
+     width: 300px;
+     margin: 30px auto;
+     border: 2px solid rebeccapurple;
+
+     /* overflow: auto; giữ lại chiều cao của box khi col-1 col-2 float "or" sử dụng clearfix */
+}
+.box::after {
+     content: "";
+     display: block;
+     clear: both;
+}
+
+.col-1 {
+     width: 100px;
+     height: 100px;
+     background-color: teal;
+     color: #fff;
+     float: left;
+}
+.col-2 {
+     width: 100px;
+     height: 50px;
+     background-color: yellowgreen;
+     color: #fff;
+     float: right;
+}
+/* ---------------------------------- Clear --------------------------------- */
+.text {
+     clear: both;
+}
+/* Sử dụng clearfix phải là thẻ block */
+.clearfix {
+     clear: both;
+}
+
+/* ---------------------------------- BT --------------------------------- */
+.box1 {
+     padding: 10px;
+     width: 70%;
+     border: 2px solid royalblue;
+     margin: 0 auto;
+}
+.box1::after {
+     content: "";
+     display: block;
+     clear: both;
+}
+.img-thumb {
+     width: 200px;
+     height: 200px;
+     margin-right: 20px;
+     border-radius: 50%;
+     float: left;
+     shape-outside: circle(50%);
+}
+.img-thumb img {
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     object-fit: cover;
+}
+
+/* ---------------------------------- Display --------------------------------- */
+.box2 {
+     display: inline-block;
+     margin: 10px;
+     border: 1px solid lawngreen;
+     padding: 5px 15px;
+}
+
+/* ---------------------------------- Position --------------------------------- */
+.box3 {
+     width: 300px;
+     height: 300px;
+     border: 1px solid red;
+     margin: 30px auto;
+     position: relative;
+}
+.item {
+     background-color: aqua;
+     color: green;
+     width: 150px;
+     border: 1px solid #fff;
+     padding: 10px 0;
+     text-align: center;
+}
+.item:nth-child(2) {
+     position: relative;
+     left: 10px;
+     top: 30px;
+     /* top: 30%;  => % theo "chiều rộng" của thẻ cha */
+     background-color: lightcoral;
+
+     z-index: 1;
+}
+.item:nth-child(3) {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+}
+.item:nth-child(4) {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+}
+
+/* BT */
+.product {
+     width: 300px;
+     margin: 0 auto;
+     border: 1px solid #ccc;
+     position: relative;
+}
+.product img{
+     display: block;
+     max-width: 100%;
+     height: auto;
+}
+.product-info {
+     padding: 5px 10px;
+}
+.wrap {
+     position: relative;
+}
+.sale {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     background-color: red;
+     color: #fff;
+     padding: 3px 5px;
+}
+.overlay {
+     position: absolute;
+     inset: 0;
+     background-color: rgb(221, 221, 221, .5);
+     display: none;
+}
+.product:hover .overlay {
+     cursor: pointer;
+     display: block;
+}
+
+.box4 {
+     width: 300px;
+     margin: 30px auto;
+     padding: 10px;
+     border: 1px solid red;
+}
+.box4 ul {
+     list-style: none;
+     /* list-style-position: inside; */
+}
+
+/* .songs {
+     width: 300px;
+     margin: 30px auto;
+     border: 1px solid red;
+}
+.songs h2 {
+     display: list-item;
+     list-style: inside decimal-leading-zero;
+} */
+
+/*/ ---------------------------------- Counters --------------------------------- */
+.songs {
+     width: 300px;
+     margin: 30px auto;
+     counter-reset: song-item;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.songs .song {
+     font-size: 14px;
+     padding: 10px 20px;
+     border-bottom: 1px solid #ccc;
+     counter-increment: song-item;
+}
+/*  */
+.songs .song::before {
+     content: "#" counter(song-item);
+     display: block;
+     width:  30px;
+     height: 30px;
+     background-color: green;
+     color: #fff;
+     text-align: center;
+     line-height: 30px;
+     border-radius: 50%;
+     float: left;
+     margin-right: 5px;
+}
+.songs .children {
+     counter-reset: song-children;
+     padding-left: 30px;
+}
+.songs .children .song {
+     counter-increment: song-children;
+}
+.songs .children .song::before {
+     content: "#" counter(song-item) "." counter(song-children);
+}
+/*  */
+.social {
+     display: flex;
+     flex-direction: column;
+     width: 300px;
+     margin: 30px auto;
+     list-style: none;
+     border: 1px solid rebeccapurple;
+     padding: 10px;
+}
+.social li {
+     border-bottom: 1px solid #ccc;
+     line-height: 1.5;
+}
+/* .social li i{
+     display: inline-block;
+     width: 25px;
+     height: 25px;
+     color: rebeccapurple;
+     text-align: center;
+     line-height: 25px;
+     background-color: #ccc;
+     border-radius: 50%;
+     font-size: 0.9rem;
+} */
+.social li {
+     display: inline-block;
+     width: 25px;
+     height: 25px;
+     color: rebeccapurple;
+     text-align: center;
+     line-height: 25px;
+     background-color: #ccc;
+     border-radius: 50%;
+     font-size: 0.9rem;
+     /* vertical-align: middle; */
+     font-family: "Font Awesome 6 Brands";
+}
+.facebook::before {
+     content: "\f09a";
+}
+.instagram::before {
+     content: "\f16d";
+}
+.tiktok::before {
+     content: "\e07b";
+}
+
+/* ---------------------------------- Position --------------------------------- */
