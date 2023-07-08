@@ -1,0 +1,130 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Manrope", sans-serif;
+}
+body {
+     background-color: #f7f7f9;
+}
+.header {
+     padding: 30px 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.header__logo {
+     width: 150px;
+     height: 18px;
+}
+.header__logo img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.navbar__list {
+     display: flex;
+     align-items: center;
+     gap: 32px;
+     list-style: none;
+}
+.navbar__link {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     text-decoration: none;
+     color: #333;
+     font-size: 15px;
+     font-weight: 700;
+     padding: 6px 8px;
+}
+.navbar__link:hover {
+     color: #666;
+}
+.navbar__link i {
+     margin-top: 2px;
+     font-size: 9px;
+     text-shadow: 0px -1px black;
+}
+.navbar__link--ect {
+     display: flex;
+     gap: 18px;
+     text-decoration: none;
+     color: #666;
+}
+.navbar__link--ect i {
+     text-shadow: none;
+     font-size: 18px;
+}
+
+/* Sub list */
+.navbar__list--item {
+     position: relative;
+}
+.navbar__list--item:hover .wrap__list{
+     display: flex;
+}
+.wrap__list {
+     position: absolute;
+     margin-top: 30px;
+     margin-left: -40vw;
+     width: 90vw;
+     display: flex;
+     border-radius: 8px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     padding: 30px 0 30px 40px;
+
+     display: none;
+}
+.wrap__list::before {
+     content: "";
+     position: absolute;
+     right: 0px;
+     top: -32px;
+     width: 100%;
+     height: 35px;
+}
+
+.block-left {
+     position: relative;
+     width: 35%;
+}
+.block-left::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     height: 100%;
+     width: 1px;
+     margin-right: 35px;
+     background-color: #eee;
+}
+.sub__title {
+     font-size: 14px;
+     font-weight: 700;
+     margin-bottom: 12px;
+}
+.sub__list {
+     display: flex;
+     gap: 150px;
+     width: 100%;
+}
+.sub__item {
+     font-size: 14px;
+     font-weight: 700;
+     list-style: none;
+     margin-top: 12px;
+}
+.sub__link {
+     text-decoration: none;
+     color: #333;
+}
+.sub__link:hover {
+     text-decoration: underline;
+}
+.block-right {
+     width: 60%;
+}
+.block-right .sub__list {
+     justify-content: space-between;
+}
