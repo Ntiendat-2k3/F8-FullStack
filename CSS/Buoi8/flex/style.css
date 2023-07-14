@@ -1,0 +1,139 @@
+* {
+     margin: 0;
+     padding: 0;
+     outline: none;
+     box-sizing: border-box;
+}
+.container {
+     width: 500px;
+     border: 1px solid brown;
+     margin: 30px auto;
+     padding: 5px;
+}
+.box {
+     display: flex;
+     justify-content: flex-start;
+     align-items: stretch;
+     gap: 10px;
+     overflow: auto;
+
+     height: 300px;
+}
+.item {
+     padding: 10px 20px;
+     background-color: violet;
+     color: navy;
+     flex-shrink: 0;
+     flex-grow: 1;
+     flex-basis: 150px; /* same width, height khi row nhung khong vuot qua min,max-width min,max-height */
+     max-width: 100px;
+     /* flex: 0 1 150px; */
+}
+.item:nth-child(4) {
+     display: flex;
+     align-items: center;
+     color: #fff;
+     order: 2;
+}
+.item:nth-child(1) {
+     order: 4;
+}
+.item:nth-child(2) {
+     order: 3;
+}
+.item:nth-child(3) {
+     order: 1;
+}
+
+.brands {
+     width: 650px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+     flex-wrap: wrap;
+     margin: 0 auto;
+}
+img {
+     width: 100px;
+}
+
+/* .btn {
+     display: block;
+     margin: 30px auto;
+     background-color: green;
+     border-radius: 999px;
+     padding: 10px 20px;
+     color: #fff;
+     border: none;
+     letter-spacing: 0.6px;
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+}
+.btn span {
+     position: relative;
+     z-index: 1;
+}
+.btn::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 100%;
+     background-color: rebeccapurple;
+     transition: right 0.25s linear;
+}
+.btn::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 100%;
+     background-color: rebeccapurple;
+     transition: left 0.25s linear;
+} */
+/* .btn:hover::before {
+     right: 50%;
+}
+.btn:hover::after {
+     left: 50%;
+} */
+
+.switch {
+     display: block;
+     width: 70px;
+     height: 30px;
+     background-color: gray;
+     border-radius: 99px;
+     margin: 30px auto;
+     position: relative;
+     cursor: pointer;
+}
+.switch .btn {
+     display: block;
+     width: 30px;
+     height: 30px;
+     background-color: #fff;
+     border-radius: 50%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     transform: left .25s linear;
+     z-index: 1;
+}
+.switch .bg {
+     position: absolute;
+     inset: 0;
+     border-radius: 999px;
+     transition: background .25s linear;
+}
+.switch input:checked + .btn {
+     left: calc(100% - 30px);
+}
+.switch input:checked ~ .bg {
+     background-color: green;
+}

@@ -1,0 +1,148 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Inter", sans-serif;
+}
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     user-select: none;
+}
+.services {
+     width: 1060px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+     row-gap: 30px;
+}
+.service__item {
+     padding: 50px 30px;
+     border: 2px solid #ddd;
+
+     position: relative;
+}
+.icon {
+     font-size: 30px;
+     color: #b28876;
+     margin-bottom: 26px;
+}
+.service__sub--title,
+.service__title {
+     font-family: "Space Grotesk", sans-serif;
+     font-size: 20px;
+     font-weight: 700;
+     letter-spacing: 1.6;
+     margin-bottom: 10px;
+}
+.service__title {
+     transition: .25s linear;
+}
+.service__desc {
+     color: #666;
+     font-size: 13px;
+}
+.service__before {
+     position: absolute;
+     inset: 0;
+     background: rgb(178, 136, 118, 0.7);
+     padding: 20px;
+
+     display: none;
+}
+.service__item:first-child .service__before::before {
+     background: url("https://i.pinimg.com/564x/2c/86/3d/2c863d60bdf4355fbd17181d6a4c1d93.jpg");
+}
+.service__item:nth-child(2) .service__before::before {
+     background: url("https://i.pinimg.com/564x/a1/af/e5/a1afe54d18596b7e38fb4f683b9f545b.jpg");
+}
+.service__item:nth-child(3) .service__before::before {
+     background: url("https://i.pinimg.com/564x/be/1c/de/be1cdef6d08b80128eaf82a50fed956c.jpg");
+}
+.service__item:nth-child(4) .service__before::before {
+     background: url("https://i.pinimg.com/564x/17/85/58/1785589db2e6594b319bcdc14285f00e.jpg");
+}
+.service__item:nth-child(5) .service__before::before {
+     background: url("https://i.pinimg.com/236x/7d/73/56/7d7356fa225295e9f983c902b8bf4446.jpg");
+}
+.service__item:last-child .service__before::before {
+     background: url("https://i.pinimg.com/564x/be/43/0a/be430a9e270a842be54ff841758d4b17.jpg");
+}
+.service__item:first-child .service__before::before,
+.service__item:nth-child(2) .service__before::before,
+.service__item:nth-child(3) .service__before::before,
+.service__item:nth-child(4) .service__before::before,
+.service__item:nth-child(5) .service__before::before,
+.service__item:last-child .service__before::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background-size: cover;
+     z-index: -1;
+}
+
+.service__sub--content {
+     border: 1px solid #dfb39f;
+     padding: 20px;
+}
+.service__sub--title {
+     font-size: 22px;
+     color: #fff;
+     margin-bottom: 14px;
+}
+.service__sub--desc {
+     color: #fff;
+     font-size: 14px;
+     margin-bottom: 30px;
+     line-height: 1.6;
+}
+.service__link {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     width: 110px;
+     text-decoration: none;
+     color: #fff;
+     font-family: "Space Grotesk", sans-serif;
+     font-size: 14px;
+}
+.service__link:hover .arrow {
+     background-color: #fff;
+     color: #333;
+}
+.arrow {
+     width: 22px;
+     height: 22px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     border: 1px solid #eee;
+     font-size: 12px;
+     transition: 0.25s linear;
+}
+
+.service__sub--title,
+.service__sub--desc,
+.service__link {
+     transform: translateY(50px);
+     transition: 0.25s linear;
+}
+.service__item:hover .service__title,
+.service__item:hover .service__desc,
+.service__item:hover .icon {
+     opacity: 0;
+     transform: translateY(-6px);
+}
+.service__before:hover .service__sub--title,
+.service__before:hover .service__sub--desc,
+.service__before:hover .service__link {
+     transform: translateY(0);
+}
+.service__item:hover .service__before {
+     display: block;
+}
+
+

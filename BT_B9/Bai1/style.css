@@ -1,0 +1,146 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Inter", sans-serif;
+}
+.container {
+     width: 1180px;
+     padding: 15px 30px;
+     margin: 0 auto;
+
+     display: flex;
+     justify-content: space-between;
+}
+.item {
+     margin-top: 14px;
+     display: flex;
+}
+.item:hover .item__content {
+     text-align: left;
+     transform: translateX(100%);
+}
+.item:hover .item__year {
+     transform: translateX(-100%);
+}
+.item:hover .item__content::before,
+.item:hover .item__content::after {
+     left: 0;
+}
+.item:hover .item__content::after {
+     transform: translateX(-50%);
+}
+.item:hover .item__readmore {
+     color: #fff;
+     background-color: #a26f5a;
+}
+.item__content {
+     width: 270px;
+     text-align: right;
+     padding: 0px 25px 30px 25px;
+     transition: 0.25s linear;
+
+     position: relative;
+}
+.item__content::before,
+.item__content::after {
+     content: "";
+     position: absolute;
+     right: 0;
+}
+.item__content::before {
+     bottom: 0;
+     height: 92%;
+     width: 1px;
+     background-color: #eee;
+}
+.item__content::after {
+     top: 5px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     transform: translateX(50%);
+     background-color: #44988a;
+     box-shadow: 0px 0px 18px 3px #44988a;
+}
+.item__title {
+     font-family: "Space Grotesk", sans-serif;
+     font-size: 24px;
+     font-weight: 700;
+     margin-bottom: 10px;
+}
+.item__desc {
+     color: #999;
+     font-size: 13px;
+     margin-bottom: 12px;
+     line-height: 1.6;
+}
+.item__readmore {
+     font-family: "Space Grotesk", sans-serif;
+     color: #666;
+     font-size: 12px;
+     text-decoration: none;
+     padding: 3px 10px 5px;
+     background-color: #f3f3f3;
+     border-radius: 999px;
+}
+.item__year {
+     color: #666;
+     font-size: 12px;
+     font-weight: 500;
+     padding: 0 20px;
+     transition: 0.25s linear;
+}
+
+.img__thumb {
+     width: 320px;
+     height: 350px;
+
+     position: relative;
+}
+.img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.quality {
+     height: 94%;
+     width: 210px;
+     position: absolute;
+     left: 0;
+     bottom: -60px;
+     transform: translateX(-50%);
+     background: url("https://i.pinimg.com/564x/90/a0/85/90a085f25f7d5b5ec107271c25ba2bab.jpg");
+     background-size: cover;
+}
+/* .quality::before {
+     content: "";
+     position: absolute;
+     inset: 8px;
+     background-color: #415aae;
+} */
+.bg--blue {
+     position: absolute;
+     inset: 9px;
+     background-color: #415aae;
+}
+.number,
+.text {
+     position: absolute;
+     right: 14px;
+     color: transparent; 
+     background-image: url("https://thumbs.dreamstime.com/b/fire-isolated-over-black-background-14157083.jpg");
+     background-size: cover;
+     background-clip: text;
+     -webkit-background-clip: text;
+}
+.number {
+     font-size: 45px;
+     font-weight: 700;
+     bottom: 50px;
+}
+.text {
+     color: #fff;
+     bottom: 30px;
+     font-size: 12px;
+}

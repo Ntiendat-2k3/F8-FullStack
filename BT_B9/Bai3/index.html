@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Drop us a line</title>
+          <!-- Embed Fonts -->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+               rel="stylesheet" />
+          <!-- Embed Icons -->
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+               integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+               crossorigin="anonymous"
+               referrerpolicy="no-referrer" />
+          <!-- Styles -->
+          <link rel="stylesheet" href="./style.css" />
+     </head>
+     <body>
+          <section class="message">
+               <h1 class="message__title">Drop Us a Line</h1>
+               <p class="message__desc">
+                    Reach out to us from our contact form and we will get back to you shortly.
+               </p>
+               <form
+                    action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                    class="form"
+                    method="GET">
+                    <div class="firstname">
+                         <input type="text" name="firstname" required />
+                         <span>First Name *</span>
+                    </div>
+                    <div class="lastname">
+                         <input type="text" name="lastname" required />
+                         <span>Last Name *</span>
+                    </div>
+                    <div class="email">
+                         <input type="email" name="email" required />
+                         <span>Email *</span>
+                    </div>
+                    <div class="sale">
+                         <select name="sale" id="sale">
+                              <option value="">Select a department</option>
+                              <option value="sales" selected>Sales</option>
+                              <option value="marketing">Marketing</option>
+                              <option value="support">Customer Support</option>
+                         </select>
+                         <i class="fa-solid fa-chevron-down icon"></i>
+                    </div>
+                    <div class="feedback">
+                         <textarea name="feedback"></textarea>
+                         <span>Message *</span>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+               </form>
+          </section>
+     </body>
+</html>
